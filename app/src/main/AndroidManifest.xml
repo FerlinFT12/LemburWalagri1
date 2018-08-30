@@ -3,9 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.web.codeplace.lemburwalagri">
 
-    <!-- menambah permission internet -->
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
+    <!-- menambah permission  -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +19,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBogISg3uPaiYhyUx3DIdmy8ls_Z9ikoso"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.nearby.messages.API_KEY"
+            android:value="AIzaSyBQHCN1dAhsjtqOHT7QNFAtE2qGfzzX95g" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
