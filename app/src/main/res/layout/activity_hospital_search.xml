@@ -6,26 +6,88 @@
     android:id="@+id/activity_hospital_search"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".hospital_search">
+    tools:context=".hospital_search"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:text="halaman PENCARIAN RUMAH SAKIT"
-        android:textColor="@android:color/holo_red_dark"
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textAllCaps="true"
-        android:width="@android:dimen/thumbnail_width"
-        tools:textStyle="bold" />
+        tools:context=".MapsActivity" />
 
-    <RatingBar
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:layout_marginTop="83dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/relLayout1">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"/>
+
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:id="@+id/input_search"
+            android:background="@null"
+            android:hint="Enter Address, City or Zip Code"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="33dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_gps" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:layout_below="@+id/relLayout1"
+        >
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/button_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@drawable/nav_selector"
+            app:itemTextColor="@drawable/nav_selector"
+            app:menu="@menu/button_menu" />
+    </RelativeLayout>
+
+
 </RelativeLayout>
