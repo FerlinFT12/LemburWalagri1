@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-public class infectious_disease_information extends AppCompatActivity {
+public class hospital_details extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager viewPager;
@@ -16,7 +16,7 @@ public class infectious_disease_information extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_infectious_disease_information);
+        setContentView(R.layout.activity_hospital_details);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.setAdapter(new CustomAdapter(getSupportFragmentManager(),getApplicationContext()));
@@ -44,7 +44,7 @@ public class infectious_disease_information extends AppCompatActivity {
 
     private class CustomAdapter extends FragmentPagerAdapter {
 
-        private String fragments[] = {"Fragment 1", "Fragment 2"};
+        private String fragments[] = {"Fasilitas Kesehatan", "Jumlah Kamar","Jumlah Dokter","Jumlah Pasien"};
 
         public CustomAdapter(FragmentManager supportFragmentManager, Context applicationContext) {
             super(supportFragmentManager);
@@ -57,6 +57,10 @@ public class infectious_disease_information extends AppCompatActivity {
                     return new Fragment_Faskes();
                 case 1:
                     return new Fragment_Jml_Kamar();
+                case 2:
+                    return new Fragment_Jml_Dokter();
+                case 3:
+                    return new Fragment_Jml_Pasien();
                 default:
                     return null;
             }
