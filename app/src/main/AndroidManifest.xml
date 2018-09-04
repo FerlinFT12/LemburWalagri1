@@ -4,6 +4,7 @@
 
     <!-- menambah permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -89,8 +90,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".hospital_details"></activity>
-        <activity android:name=".user_login_form"></activity>
+        <activity android:name=".hospital_details" />
+        <activity android:name=".user_login_form" />
+        <activity android:name=".user_register_form"></activity>
     </application>
 
 </manifest>
