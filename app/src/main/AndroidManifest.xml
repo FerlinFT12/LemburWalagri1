@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.web.codeplace.lemburwalagri">
 
     <!-- menambah permission -->
@@ -19,7 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data
+        <!--  <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBogISg3uPaiYhyUx3DIdmy8ls_Z9ikoso" />
         <meta-data
@@ -27,7 +28,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.nearby.messages.API_KEY"
-            android:value="AIzaSyBQHCN1dAhsjtqOHT7QNFAtE2qGfzzX95g" />
+            android:value="AIzaSyBQHCN1dAhsjtqOHT7QNFAtE2qGfzzX95g" /> -->
 
         <activity
             android:name=".MainActivity"
@@ -92,7 +93,6 @@
         </activity>
         <activity android:name=".hospital_details" />
         <activity android:name=".user_login_form" />
-        <activity android:name=".user_register_form"></activity>
     </application>
 
 </manifest>

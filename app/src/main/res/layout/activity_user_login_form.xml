@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:padding="16dp"
     tools:context=".user_login_form">
 
@@ -56,21 +56,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"
+            android:inputType="text"
             android:singleLine="true"
+            android:ems="20"
             android:hint="NIK"
             />
 
         <EditText
-            android:id="@+id/txt_nama"
+            android:id="@+id/txt_tgl_lahir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:hint="Nama"
-            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"
+            android:inputType="text"
             android:singleLine="true"
-
+            android:ems="20"
+            android:hint="Tanggal Lahir"
             />
 
         <Button
@@ -82,16 +85,9 @@
             android:background="#448AFF"
             android:text="Login"
             android:textColor="#fff"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="OnLogin" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:background="#00555555"
-            android:text="Register"
-            android:textStyle="bold"/>
     </LinearLayout>
 
 </RelativeLayout>
