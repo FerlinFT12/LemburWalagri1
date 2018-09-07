@@ -30,9 +30,6 @@ public class hospital_search extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
-
     @Override
     public void onBackPressed() {
         Intent intent= new Intent(hospital_search.this,MainActivity.class);

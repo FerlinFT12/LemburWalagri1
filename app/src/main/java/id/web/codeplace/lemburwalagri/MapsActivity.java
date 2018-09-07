@@ -99,15 +99,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(final MapboxMap mapboxMap) {
         map = mapboxMap;
         enableLocationPlugin();
-        Bnvg = (BottomNavigationView)findViewById(R.id.button_navigation);
+
         listOfIndividualLocations = new ArrayList<>();
+        mGps = (ImageView) findViewById(R.id.ic_gps);
         mGps.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 initializeLocationEngine();
             }
         });
-
+        Bnvg = (BottomNavigationView)findViewById(R.id.button_navigation);
         Bnvg.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem Item) {
