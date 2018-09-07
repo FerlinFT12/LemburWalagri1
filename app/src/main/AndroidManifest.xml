@@ -20,15 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--  <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBogISg3uPaiYhyUx3DIdmy8ls_Z9ikoso" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="com.google.android.nearby.messages.API_KEY"
-            android:value="AIzaSyBQHCN1dAhsjtqOHT7QNFAtE2qGfzzX95g" /> -->
+
 
         <activity
             android:name=".MainActivity"
@@ -93,6 +85,7 @@
         </activity>
         <activity android:name=".hospital_details" />
         <activity android:name=".user_login_form" />
+        <activity android:name=".MapsActivity"/>
     </application>
 
 </manifest>
