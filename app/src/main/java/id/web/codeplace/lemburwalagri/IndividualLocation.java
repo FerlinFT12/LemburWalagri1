@@ -11,9 +11,9 @@ public class IndividualLocation {
     private String alamat;
     private LatLng location;
 
-    public IndividualLocation(String name, String adress, LatLng location) {
+    public IndividualLocation(String name, String alamat, LatLng location) {
         this.name = name;
-        this.alamat = adress;
+        this.alamat = alamat;
         this.location = location;
     }
 
@@ -29,8 +29,8 @@ public class IndividualLocation {
         return alamat;
     }
 
-    public void setAdress(String adress) {
-        this.alamat = adress;
+    public void setAdress(String alamat) {
+        this.alamat = alamat;
     }
 
     public LatLng getLocation() {

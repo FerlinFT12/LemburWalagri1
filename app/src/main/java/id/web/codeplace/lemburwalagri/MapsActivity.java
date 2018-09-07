@@ -114,6 +114,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onNavigationItemReselected(@NonNull MenuItem Item) {
                 switch (Item.getItemId()) {
                     case R.id.action_hospital:
+                        map.clear();
                         List<Feature> featureList = featureCollection.features();
                         for (int x = 0; x < featureList.size(); x++) {
 
@@ -141,7 +142,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                             // Add the location's marker to the map
                             mapboxMap.addMarker(new MarkerOptions()
                                     .position(singleLocationLatLng)
-                                    .title(singleLocationName));
+                                    .title(singleLocationName)
+                                    .title(singleLocationDescription));
 
 
                         }
