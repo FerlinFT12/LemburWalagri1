@@ -7,7 +7,7 @@
         android:id="@+id/action_hospital"
         android:enabled="true"
         android:title="Hospital"
-        android:icon="@drawable/ic_hospital"
+        android:icon="@drawable/ic_hospitaluser"
         />
 
     <item

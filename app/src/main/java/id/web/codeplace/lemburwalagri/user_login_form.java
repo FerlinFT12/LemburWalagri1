@@ -26,7 +26,7 @@ public class user_login_form extends AppCompatActivity {
             public void onClick(View view) {
                 OnLogin(view);
 
-                Intent intent = new Intent(user_login_form.this, MainActivity.class);
+                Intent intent = new Intent(user_login_form.this, user_dashboard.class);
                 startActivity(intent);
             }
         });
