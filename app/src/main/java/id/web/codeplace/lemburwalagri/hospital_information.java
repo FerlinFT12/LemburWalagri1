@@ -27,7 +27,7 @@ public class hospital_information extends AppCompatActivity {
     private ListView lv;
 
     // URL to get hospital JSON
-    private static String url = "https://api.myjson.com/bins/cr8ic";
+    private static String url = "http://dinkes.codeplace.web.id/Hospital/hospital.php";
     ArrayList<HashMap<String,String>> hospitalList;
 
     @Override
@@ -68,10 +68,9 @@ public class hospital_information extends AppCompatActivity {
 
             if (jsonStr != null) {
                 try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
 
                     // Getting JSON Array node
-                    JSONArray hospitals= jsonObj.getJSONArray("hospitals");
+                    JSONArray hospitals= new JSONArray(jsonStr);
 
                     // looping through All Hospitals
                     for (int i = 0; i < hospitals.length(); i++) {
@@ -80,10 +79,7 @@ public class hospital_information extends AppCompatActivity {
                         String hosp_id = c.getString("hosp_id");
                         String hosp_name = c.getString("hosp_name");
                         String hosp_address = c.getString("hosp_address");
-
-                        // Phone node is JSON Object
-                        JSONObject hosp_phone = c.getJSONObject("hosp_phone");
-                        String office = hosp_phone.getString("office");
+                        String hosp_phone = c.getString("hosp_phone");
 
                         // tmp hash map for single contact
                         HashMap<String, String> hospital = new HashMap<>();
@@ -92,7 +88,7 @@ public class hospital_information extends AppCompatActivity {
                         hospital.put("hosp_id", hosp_id);
                         hospital.put("hosp_name", hosp_name);
                         hospital.put("hosp_address", hosp_address);
-                        hospital.put("office", office);
+                        hospital.put("hosp_phone", hosp_phone);
 
                         // adding hospital to hospital list
                         hospitalList.add(hospital);
@@ -138,8 +134,8 @@ public class hospital_information extends AppCompatActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     hospital_information.this, hospitalList,
-                    R.layout.list_item, new String[]{"hosp_name", "hosp_address", "office"},
-                    new int[]{R.id.hosp_name, R.id.hosp_address, R.id.office});
+                    R.layout.list_item, new String[]{"hosp_name", "hosp_address", "hosp_phone"},
+                    new int[]{R.id.hosp_name, R.id.hosp_address, R.id.hosp_phone});
 
             lv.setAdapter(adapter);
 

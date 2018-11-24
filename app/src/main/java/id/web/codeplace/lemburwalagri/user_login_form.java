@@ -25,9 +25,6 @@ public class user_login_form extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 OnLogin(view);
-
-                Intent intent = new Intent(user_login_form.this, user_dashboard.class);
-                startActivity(intent);
             }
         });
     }
@@ -39,6 +36,9 @@ public class user_login_form extends AppCompatActivity {
 
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, nik, tgllahir);
+
+        Intent intent = new Intent(user_login_form.this, user_dashboard.class);
+        startActivity(intent);
 
 
     }
